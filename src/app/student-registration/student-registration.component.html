@@ -1,0 +1,31 @@
+<div class="bg-body-secondary text-center py-5 rounded-2">
+    <h1 class="display-6 fw-bold">Student Registration</h1>
+    </div>
+
+<div class="row mt-5">
+    <div class="col-6">
+        <app-student-registration-form/>
+    </div>
+    <div class="col-6">
+        <table class="table">
+            <thead>
+              <tr >
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Age</th>
+                <th scope="col">Course Name</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let std of service.StudentList">
+                <td>{{std.id}}</td>
+                <td>{{std.firstName}}</td>
+                <td>{{std.lastName}}</td>
+                <td>{{std.age}}</td>
+                <td>{{std.courseName}}</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</div>
